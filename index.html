@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>موقع حلبسة - الإبلاغ عن مشكلة</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="bg-glow"></div>
+  <div class="bg-glow-2"></div>
+
+  <header>
+    <div class="logo-container">
+      <h1 class="logo-title">موقع حلبسة</h1>
+      <span class="logo-subtitle">7LBSAA</span>
+    </div>
+    <button id="themeToggle" class="theme-toggle">
+      <i class="fas fa-moon"></i>
+    </button>
+  </header>
+
+  <main>
+    <div class="page-header" id="headerText">
+      <h2 class="page-title">الإبلاغ عن مشكلة في الموقع</h2>
+      <p class="page-desc">واجهت مشكلة أثناء استخدام الموقع؟ أخبرنا بالتفاصيل وسنعمل على مراجعتها وحلها في أقرب وقت ممكن.</p>
+    </div>
+
+    <div class="glass-card">
+      <!-- نموذج الإبلاغ -->
+      <form id="reportForm">
+        <div class="form-group">
+          <label class="form-label">الاسم الكامل</label>
+          <div class="input-wrapper">
+            <i class="fas fa-user input-icon"></i>
+            <input type="text" id="fullName" class="form-control" placeholder="أدخل اسمك الكامل" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">البريد الإلكتروني</label>
+          <div class="input-wrapper">
+            <i class="fas fa-envelope input-icon"></i>
+            <input type="email" id="email" class="form-control" placeholder="example@email.com" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">رقم الهاتف</label>
+          <div class="input-wrapper">
+            <i class="fas fa-phone input-icon"></i>
+            <input type="tel" id="phone" class="form-control" placeholder="أدخل رقم هاتفك" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">وصف المشكلة</label>
+          <div class="input-wrapper" style="align-items: flex-start;">
+            <i class="fas fa-comment input-icon" style="top: 15px;"></i>
+            <textarea id="problem" class="form-control" placeholder="اكتب تفاصيل المشكلة التي واجهتها..." required></textarea>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="drag-drop-area" id="dropArea">
+            <i class="fas fa-cloud-arrow-up upload-icon"></i>
+            <p class="upload-text">إرفاق صورة للمشكلة (اختياري)</p>
+            <p class="upload-subtext">يمكنك رفع صورة توضح المشكلة لمساعدتنا على فهمها بشكل أفضل</p>
+            <input type="file" id="file-input" accept="image/*">
+          </div>
+          
+          <div class="image-preview-container" id="previewContainer">
+            <button type="button" class="remove-img-btn" id="removeImgBtn"><i class="fas fa-times"></i></button>
+            <img src="" alt="Preview" class="image-preview" id="imagePreview">
+          </div>
+        </div>
+
+        <button type="submit" id="submitBtn" class="submit-btn">
+          <span>إرسال البلاغ</span>
+          <i class="fas fa-paper-plane"></i>
+        </button>
+      </form>
+
+      <!-- رسالة النجاح -->
+      <div id="successView" class="success-view">
+        <i class="fas fa-check-circle success-icon"></i>
+        <h3 class="success-title">تم إرسال البلاغ بنجاح!</h3>
+        <p class="success-desc">سيتم الرد عليك على الهاتف أو البريد الإلكتروني في أقرب وقت ممكن.</p>
+        <button type="button" onclick="location.reload()" class="submit-btn" style="margin-top: 20px;">
+          العودة إلى الصفحة الرئيسية
+        </button>
+      </div>
+    </div>
+  </main>
+
+  <script type="module" src="index.js"></script>
+</body>
+</html>
